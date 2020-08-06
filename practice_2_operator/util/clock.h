@@ -1,3 +1,6 @@
+#ifndef _CLOCK_HPP_
+#define _CLOCK_HPP_
+
 #include <iostream>
 using namespace std;
 class Time{
@@ -15,3 +18,5 @@ public:
     Time operator--(int);   // 后缀--
     void ShowTime();
 };
+
+#endif

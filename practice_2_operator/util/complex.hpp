@@ -9,6 +9,8 @@
 最好用非成员形式（包括友元和普通函数）的重载运算符函数实现。[如此，“你+别人”或者“别人+你”都能正常使用]
 [解决前面“Complex+2没问题，但是2+Complex出了问题”的情况。]
 */
+#ifndef _COMPLEX_HPP_
+#define _COMPLEX_HPP_
 
 #include<iostream>
 
@@ -63,3 +65,5 @@ void Complex::display(){
     if(i!=0)
         std::cout<<i<<"i"<<std::endl;
 }
+
+#endif

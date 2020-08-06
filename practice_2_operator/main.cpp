@@ -1,7 +1,10 @@
 #include "util/clock.h"
 #include "util/complex.hpp"
+#include "util/exception.hpp"
+using namespace std;
 
 int main(){
+    //about Operation
     Time t1(12,10,11);
     t1.ShowTime();
     t1.operator()(23,20,34);	
@@ -25,6 +28,19 @@ int main(){
     c4.display();
     c5.display();
     c6.display();
+
+    //about Exception try...catch
+    Stack s;
+    try{
+        s.push(10);  
+        s.push(20);
+        s.push(30);  
+        s.push(40);
+    }
+    catch(Full e){	
+        cout<<"Exception: Stack Full..."<<endl;
+        cout<<"The value not push in stack:"<<e.getValue()<<endl; 
+    }
 
     cin.get();
 }
